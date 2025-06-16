@@ -1,4 +1,4 @@
-// leetcode 735. Asteroid Collision\
+// 735. Asteroid Collision\
 // optimal approach - using stack to keep track of the remaining asteroids after collision
 // tc - O(n) every element is visited only once
 // sc - O(n) stack and list to store the elements
