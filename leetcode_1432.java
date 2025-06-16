@@ -1,4 +1,8 @@
-// leetcode_1432
+// 1432. Max Difference You Can Get From Changing an Integer
+// optimal approach - replacing first non-9 character to 9 to get the biggest possible number
+// if the first character is 1 replacing the next non-1 & non-0 character to 0 else replace the first charcter and all its occurances with 1
+// tc - O(log10n) every element is visited maximum once in both s & t (number of digits in the given number)
+// sc - O(2log10n) 2 strings s & t with length equal to the number of digits in the given number 
 
 class Solution {
     public int maxDiff(int num) {
