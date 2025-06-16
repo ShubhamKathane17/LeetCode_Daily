@@ -27,21 +27,17 @@ class Solution {
 
 class Solution {
     public int maximumDifference(int[] nums) {
-        int maxDiff = Integer.MIN_VALUE;
+        int maxDiff = -1;
         int n = nums.length;
         int bottom = nums[0];
 
         for (int i = 1; i < n; i++) {
             if (nums[i] > bottom) {
                 maxDiff = Math.max(maxDiff, nums[i] - bottom);
-            } else if (nums[i] < bottom) {
-                bottom = nums[i];
-            }
+            } 
+            bottom = Math.min(bottom, nums[i]);
         }
 
-        if (maxDiff <= 0) {
-            return -1;
-        }
         return maxDiff;
     }
 }
