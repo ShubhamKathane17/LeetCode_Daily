@@ -84,3 +84,35 @@ class Solution {
         return solve(text1, text2);
     }
 }
+
+
+// space optimization in bottom up
+// tc - O(m * n)
+// sc - O(n)
+
+class Solution {
+    public int solve(String text1, String text2) {
+        int[] prev = new int[text2.length() + 1];
+        int[] curr = new int[text2.length() + 1];
+
+        for (int idx1 = 1; idx1 <= text1.length(); idx1++) {
+            for (int idx2 = 1; idx2 <= text2.length(); idx2++) {
+
+                if (text1.charAt(idx1 - 1) == text2.charAt(idx2 - 1)) {
+                     curr[idx2] = 1 + prev[idx2 - 1];
+                } else {
+                    int case2 = prev[idx2];
+                    int case3 = curr[idx2 - 1];
+                    curr[idx2] = Math.max(case2, case3); 
+                }
+                
+            }
+            prev = Arrays.copyOf(curr, curr.length);
+        }
+        return prev[text2.length()];
+    }
+
+    public int longestCommonSubsequence(String text1, String text2) {
+        return solve(text1, text2);
+    }
+}
