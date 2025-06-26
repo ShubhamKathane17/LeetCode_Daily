@@ -1,7 +1,7 @@
 // 198. House Robber
 
 // brute force - recursion to check maximum amount the robber can rob
-// tc - O()
+// tc - O(2^n)
 // sc - O(n) - recursion stack
 
 // class Solution {
