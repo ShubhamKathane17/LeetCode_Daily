@@ -90,10 +90,7 @@
 class Solution {
     public int solve(int[] nums) {
         int n = nums.length;
-
-        int[] dp = new int[n];
-        Arrays.fill(dp, -1);
-
+        
         int prev = nums[n-1];
         int next = 0;
         int curr = 0;
