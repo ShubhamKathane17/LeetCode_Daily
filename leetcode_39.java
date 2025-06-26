@@ -1,7 +1,7 @@
 // 39. Combination Sum
 // optimal approach - using backtracking
-// tc - O(N∗Target∗NumberOfCombinations)
-// sc - O(n) - temp to store the items
+// tc - O(N∗Target ∗ NumberOfCombinations)
+// sc - O(Target ∗ NumberOfCombinations)
 
 class Solution {
     private List<List<Integer>> ans;
