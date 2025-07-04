@@ -28,3 +28,15 @@ class Solution {
         return word.charAt(k-1);
     }
 }
+
+// optimal approach - counting the number of set bits to know the shift 
+// tc - O(log k)
+// sc - O(1)
+
+class Solution {
+    public char kthCharacter(int k) {
+        int setBits = Integer.bitCount(k-1);
+        
+        return (char) ('a' + (setBits % 26));
+    }
+}
