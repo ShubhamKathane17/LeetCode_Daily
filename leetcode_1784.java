@@ -24,3 +24,14 @@ class Solution {
         return true;
     }
 }
+
+// optimal - since the string does not contain leading zeros then if we have "01" as a substring that means string has two or more segements of ones
+// tc - O(n)
+// sc - O(1)
+class Solution {
+    public boolean checkOnesSegment(String s) {
+        if(s.contains("01"))
+            return false;
+        return true;
+    }
+}
